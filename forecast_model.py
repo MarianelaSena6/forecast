@@ -5,7 +5,7 @@ from skforecast.model_selection import grid_search_forecaster
 from clean import *
 from graficos import *
 import joblib
-
+# PARECIERAN MEJORAR LOS RESULTADOS APLICANDO LOG A LAS VARIABLES
 
 # Separación datos train-test
 def separacion_train_test(df, steps):
