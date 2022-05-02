@@ -84,8 +84,8 @@ if __name__ == "__main__":
 
     # Se separa el dataset para entrenar de la parte de test
     train_test = separacion_train_test(CAT1_df, steps_predict)
-    unidades_vendidas_train = train_test[0]['UNITS_SOLD']
-    unidades_vendidas_test = train_test[1]['UNITS_SOLD']
+    unidades_vendidas_train = np.log(train_test[0]['UNITS_SOLD'])
+    unidades_vendidas_test = np.log(train_test[1]['UNITS_SOLD'])
     plot_train_test(unidades_vendidas_train, unidades_vendidas_test)
 
     # Entrenar modelo con parámetros de prueba
